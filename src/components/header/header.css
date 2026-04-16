@@ -1,0 +1,21 @@
+.header-content {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 32px;
+    width: 100%;
+    max-width: 800px;
+    background-color: #1E1D22;
+    position: fixed;
+    top: 20px;        
+    left: 50%;        
+    transform: translateX(-50%); 
+    z-index: 10;
+}
+.logo{
+    color: white;
+}
+.span-logo{
+    color: #F16D10
+}
