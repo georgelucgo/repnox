@@ -1,4 +1,4 @@
-.header-content {
+.header {
     display: flex;
     justify-content: center;
     margin: 0 auto;
@@ -13,9 +13,30 @@
     transform: translateX(-50%); 
     z-index: 10;
 }
+
+.header-content{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 12px;
+    width: 100%;
+    align-items: center;
+}
+
 .logo{
     color: white;
+    cursor: pointer;
+    user-select: none;
 }
 .span-logo{
     color: #F16D10
+}
+
+.navbar{
+    font-weight: bold;    
+}
+
+a{
+    text-decoration: none;
+    margin: 0 30px;
+    color: white;
 }
