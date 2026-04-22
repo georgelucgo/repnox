@@ -9,6 +9,8 @@ import { useEffect } from "react";
 
 function Detalhes() {
   const { id } = useParams();
+
+  const [erro, setErro] = useState("");
   const [modal, setModal] = useState(false);
   const [historico, setHistorico] = useState(() => {
     const salvo = localStorage.getItem("historico");
@@ -58,6 +60,16 @@ function Detalhes() {
     const [ano, mes, dia] = data.split("-");
     dataFormatada = new Date(ano, mes - 1, dia).toLocaleDateString("pt-BR");
   }
+
+  useEffect(() => {
+    if (erro) {
+      const timer = setTimeout(() => {
+        setErro("");
+      }, 3000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [erro]);
 
   const adicionarTreino = () => {
     const novoTreino = {
@@ -124,6 +136,30 @@ function Detalhes() {
     }
   };
 
+  const validarInputs = () => {
+    if (!data) {
+      alert("Selecione uma data");
+      return false;
+    }
+
+    if (!series || series <= 0) {
+      alert("Digite um número válido de séries");
+      return false;
+    }
+
+    if (!peso || peso <= 0) {
+      alert("Digite um peso válido");
+      return false;
+    }
+
+    if (!reps || reps <= 0) {
+      alert("Digite repetições válidas");
+      return false;
+    }
+
+    return true;
+  };
+
   return (
     <div className="detalhe-container">
       <div className="detalhe-content">
@@ -183,8 +219,8 @@ function Detalhes() {
                         <div className="historico-treino" key={index}>
                           <p>{treino.data}</p>
                           <p>{item.series}</p>
-                          <p>{item.peso}</p>
-                          <p>{item.repeticoes}</p>
+                          <p>{item.peso} kg</p>
+                          <p>{item.repeticoes} reps</p>
 
                           <div className="botoes">
                             <button
@@ -274,7 +310,11 @@ function Detalhes() {
 
                     <button
                       className="botao-registrar"
-                      onClick={editando ? salvarEdicao : adicionarTreino}
+                      onClick={() => {
+                        if (!validarInputs()) return;
+
+                        editando ? salvarEdicao() : adicionarTreino();
+                      }}
                     >
                       {editando ? "Salvar" : "Registrar"}
                     </button>
