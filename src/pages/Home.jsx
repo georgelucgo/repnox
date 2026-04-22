@@ -34,6 +34,7 @@ function Home() {
       </div>
 
       <div className="about-container">
+        <div className="circulo"></div>
         <div className="about-conteudo">
         <img className="about-img" src={About} alt="" />
 
