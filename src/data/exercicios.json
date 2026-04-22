@@ -1,15 +1,26 @@
 {
+  "musculos": {
+    "Peito": "Fortaleça o peitoral e ganhe mais volume na parte superior do corpo.",
+    "Costas": "Desenvolva largura e postura com exercícios de costas.",
+    "Bíceps": "Aumente o tamanho e a definição dos braços.",
+    "Tríceps": "Dê mais volume aos braços trabalhando a parte de trás.",
+    "Ombro": "Construa ombros fortes e definidos, trazendo equilíbrio ao físico.",
+    "Perna": "Ganhe força, resistência e volume na parte inferior do corpo.",
+    "Abdômen": "Fortaleça o core e conquiste mais estabilidade e definição.",
+    "Antebraço": "Desenvolva força de pegada e resistência muscular."
+  },
+
   "exercicios": [
     { 
         "id": 1, 
         "nome": "Supino Reto com Barra", 
-        "descricao": "Exercício clássico para peitoral.", 
+        "descricao": "Exercício focado no peitoral, ideal para ganho de força e massa muscular.", 
         "imagem": "https://www.hipertrofia.org/blog/wp-content/uploads/2017/09/barbell-bench-press.gif", 
         "musculoImagem": "/images/musculos/peito.png", 
         "musculo": "Peito", 
         "tipo": "Composto", 
         "equipamento": "Barra", 
-        "tutorial": "Deite-se no banco e empurre a barra para cima." 
+        "tutorial": "Deite-se em um banco horizontal, plante os pés firmes no chão e contraia as escápulas (feche as costas). Segure a barra com uma abertura ligeiramente superior à largura dos ombros, descendo-a de forma controlada até a parte inferior do peito/mamilos, mantendo os cotovelos a cerca de 45-75 graus do corpo, e suba com força" 
     },
     { 
         "id": 2, 
@@ -59,7 +70,7 @@
         "id": 6, 
         "nome": "Puxada Frontal", 
         "descricao": "Trabalha o dorsal.", 
-        "imagem": "https://image.tuasaude.com/media/article/uh/yp/puxada-frontal_75625.gif?width=686&height=487", 
+        "imagem": "https://www.mundoboaforma.com.br/wp-content/uploads/2020/12/costas-puxada-aberta-com-barra-no-pulley.gif", 
         "musculoImagem": "/images/musculos/puxada-costas.png", 
         "musculo": "Costas", 
         "tipo": "Composto", 
@@ -160,7 +171,7 @@
   { 
     "id": 15, 
     "nome": "Desenvolvimento com Halteres", 
-    "descricao": "Ombro.", 
+    "descricao": "Ombro", 
     "imagem": "https://www.mundoboaforma.com.br/wp-content/uploads/2020/12/desenvolvimento-para-ombros-com-halteres.gif", 
     "musculoImagem": "/images/musculos/ombro-desenvolvimento.png", 
     "musculo": "Ombro", 
@@ -259,5 +270,7 @@
     "equipamento": "Peso corporal", 
     "tutorial": "Mantenha o corpo reto." 
   }
-  ]
+  ],
+
+  "historico": []
 }

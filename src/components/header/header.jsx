@@ -7,10 +7,11 @@ export default function Header() {
     <div className="header">
       <div className='header-content'>
 
+    <Link to='/'>
       <h1 className='logo'><span className='span-logo'>REP</span>NOX</h1>
+      </Link>
     
       <div className='navbar'>
-        <Link to="/#secao-exercicios">EXERCÍCIOS</Link>
         <Link to="/favoritos">FAVORITOS</Link>
         <Link to="/historico">HISTÓRICO</Link>
       </div>

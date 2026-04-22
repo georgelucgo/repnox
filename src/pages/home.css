@@ -115,3 +115,79 @@
     width: 80px;
     border-radius: 16px;
 }
+
+
+
+.exercicios-container{
+    display: flex;
+    flex-direction: column;
+    background-color: #202020;
+    color: white;
+    align-items: center;
+}
+
+.exercicios-title {
+    margin: 30px;
+    text-align: center;
+}
+
+.exercicios-title h1{
+    font-size: 3em;
+}
+
+
+.exercicios-title p {
+    margin-bottom: 10px;
+    color: #F16D10;
+}
+
+
+.exercicios-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 400px;
+    background-color: #2A2A2A;
+    border-radius: 8px;
+}
+.exercicios-card-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.exercicios-card h1{
+    margin-bottom: 20px;
+}
+
+.exercicios-card p {
+    width: 260px;
+    text-align: center;
+    color: #9D9D9D;
+}
+
+.exercicios-card img{
+    display: flex;
+    width: 250px;
+    border-radius: 16px;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 16px;
+}
+
+.exercicios-card-container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1280px;
+    gap: 30px;
+    justify-content: center;
+}
+
+.exercicios-card-container a {
+    text-decoration: none;
+    color: white;
+}

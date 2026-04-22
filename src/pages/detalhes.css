@@ -1,0 +1,252 @@
+.detalhe-container {
+    display: flex;
+    background-color: #272727;
+    color: white;
+}
+
+
+
+.detalhe-content {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.detalhe-exercicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1280px;
+}
+
+.detalhe-exercicio-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 32px;
+    gap: 30px;
+}
+
+.detalhe-title {
+    text-align: center;
+}
+
+.detalhe-title h1 {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.detalhe-title p {
+    font-size: 1.3em;
+    font-weight: lighter;
+    color: #cacaca;
+}
+
+.detalhe-info {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.detalhe-info img {
+    height: 500px;
+    margin-bottom: 30px;
+    border-radius: 16px;
+}
+
+.detalhe-info-left,
+.detalhe-info-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.detalhe-info-right p {
+    font-size: 1.3em;
+}
+
+
+.detalhe-tutorial {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 900px;
+    text-align: center;
+    gap: 10px;
+}
+
+.detalhe-tutorial p {
+    color: #cacaca;
+}
+
+
+.historico-container {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+.historico-container h2{
+    margin-bottom: 60px;
+}
+
+.historico-content {
+    display: flex;
+    width: 100%;
+    padding-left: 80px;
+    gap: 150px;
+}
+
+.historico{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.historico-treino{
+    display: flex;
+    flex-direction: row;
+    background-color: #585858;
+    margin: 30px;
+    align-items: center;
+    height: 64px;
+    padding-left: 30px;
+    border-radius: 8px;
+    gap: 30px;
+    font-weight: bold;
+    max-width: 1280px;
+}
+
+.historico-treino-content{
+    display: flex;
+    width: 100%;
+    max-width: 800px;
+    gap: 165px;
+    padding: 8px;
+}
+
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.767);
+}
+
+.modal-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(43, 43, 43);
+    width: 800px;
+    height: 800px;
+    border-radius: 16px;
+}
+
+.modal-content input{
+    width: 100%;
+    max-width: 600px;
+    height: 40px;
+    border-radius: 4px;
+}
+
+
+.icon-fechar{
+    position: absolute;
+    top: 15%;
+    left: 74%;
+    cursor: pointer;
+}
+
+.input {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 30px;
+    max-width: 600px;
+}
+
+.input input{
+    padding: 12px;
+}
+
+.input label {
+    text-align: center;
+  width: 100px; 
+  flex-shrink: 0; 
+}
+
+.botao-registrar{
+    background-color: #F16D10;
+    border: 0;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 12px;
+    width: 120px;
+    cursor: pointer;
+    color: white;
+}
+
+
+.botao-adicionar{
+    background-color: #F16D10;
+    border: 0;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 12px;
+    width: 140px;
+    cursor: pointer;
+    color: white;
+    text-transform: uppercase;
+
+}
+
+.botao-editar{
+    padding: 8px;
+    border-radius: 8px;
+    border: 0;
+    background-color: #109BF1;
+    cursor: pointer;
+}
+
+.botao-deletar{
+    padding: 8px;
+    border-radius: 8px;
+    border: 0;
+    background-color: #F11010;
+    cursor: pointer;
+}
+
+.botoes{
+    display: flex;
+    width: 100%;
+    justify-content: right;
+    gap: 20px;
+    padding-right: 16px;
+}
+
+.div-botao{
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    padding-right: 30px;
+
+}
