@@ -4,6 +4,7 @@ import Header from "./components/header/header";
 import Exercicios from "./pages/Exercicio";
 import Detalhes from "./pages/Detalhes";
 import Historico from "./pages/historico";
+import Favoritos from "./pages/Favoritos";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/exercicios/:musculo" element={<Exercicios />} />
         <Route path="/exercicio/:id" element={<Detalhes />} />
         <Route path="/historico" element={<Historico />} />
+        <Route path="/favoritos" element={<Favoritos />} />
       </Routes>
     </BrowserRouter>
   );

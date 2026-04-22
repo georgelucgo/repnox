@@ -24,7 +24,7 @@ function Exercicios() {
             placeholder=""
             value={busca}
             onChange={(e) => setBusca(e.target.value)}
-          />{" "}
+          />
           <IoSearch className="icon" />
         </div>
 

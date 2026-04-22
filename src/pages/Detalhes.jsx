@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import "./detalhes.css";
 import treinos from "../data/exercicios.json";
 import { IoIosCloseCircle } from "react-icons/io";
@@ -22,6 +22,12 @@ function Detalhes() {
   const [peso, setPeso] = useState(0);
   const [reps, setReps] = useState(0);
   const [editando, setEditando] = useState(null);
+  const [favoritos, setFavoritos] = useState(() => {
+    const salvo = localStorage.getItem("favoritos");
+    return salvo ? JSON.parse(salvo) : [];
+  });
+
+  const navigate = useNavigate();
 
   const exercicios = treinos.exercicios.filter(
     (item) => item.id === Number(id),
@@ -41,6 +47,10 @@ function Detalhes() {
       setReps(ex.repeticoes);
     }
   }, [editando]);
+
+  useEffect(() => {
+    localStorage.setItem("favoritos", JSON.stringify(favoritos));
+  }, [favoritos]);
 
   let dataFormatada = "";
 
@@ -103,6 +113,16 @@ function Detalhes() {
   );
 
   console.log(historicoFiltrado);
+
+  const favoritar = () => {
+    const exercicioId = Number(id);
+
+    if (favoritos.includes(exercicioId)) {
+      setFavoritos(favoritos.filter((fav) => fav !== exercicioId));
+    } else {
+      setFavoritos([...favoritos, exercicioId]);
+    }
+  };
 
   return (
     <div className="detalhe-container">
@@ -253,6 +273,15 @@ function Detalhes() {
                   </div>
                 </div>
               )}
+            </div>
+
+            <div className="botoes-final">
+              <button className="botao-voltar" onClick={() => navigate(-1)}>
+                Voltar
+              </button>
+              <button className="botao-favoritar" onClick={favoritar}>
+                {favoritos.includes(Number(id)) ? "Favoritado" : "Favoritar"}
+              </button>
             </div>
           </div>
         ))}

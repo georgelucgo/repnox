@@ -257,3 +257,40 @@
     gap: 30px;
     max-width: 1280px;
 }
+
+.botoes-final{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 100%;
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+
+}
+
+.botao-voltar{
+    background-color: #1071f1;
+    border: 0;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 12px;
+    width: 140px;
+    cursor: pointer;
+    color: white;
+    text-transform: uppercase;
+}
+
+.botao-favoritar{
+    background-color: #d8c51e;
+
+    border: 0;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 12px;
+    width: 140px;
+    cursor: pointer;
+    color: white;
+    text-transform: uppercase;
+}
