@@ -5,24 +5,57 @@ import treinos from "../data/exercicios.json";
 import { IoIosCloseCircle } from "react-icons/io";
 import { FaEdit } from "react-icons/fa";
 import { FaTrash } from "react-icons/fa";
+import { useEffect } from "react";
 
 function Detalhes() {
   const { id } = useParams();
   const [modal, setModal] = useState(false);
-  const [historico, setHistorico] = useState(treinos.historico);
+const [historico, setHistorico] = useState(() => {
+  const salvo = localStorage.getItem("historico");
+
+  if (salvo) return JSON.parse(salvo);
+
+  return treinos.historico || [];
+});
   const [data, setData] = useState("");
   const [series, setSeries] = useState(0);
   const [peso, setPeso] = useState(0);
   const [reps, setReps] = useState(0);
+  const [editando, setEditando] = useState(null);
 
   const exercicios = treinos.exercicios.filter(
     (item) => item.id === Number(id),
   );
 
-  const [ano, mes, dia] = data.split("-");
 
-  const dataFormatada = new Date(ano, mes - 1, dia).toLocaleDateString("pt-BR");
-  console.log(dataFormatada);
+useEffect(() => {
+  localStorage.setItem("historico", JSON.stringify(historico));
+}, [historico]);
+
+
+  useEffect(() => {
+
+
+    if (editando) {
+      setData(editando.data);
+
+      const ex = editando.exercicios[0];
+      setSeries(ex.series);
+      setPeso(ex.peso);
+      setReps(ex.repeticoes);
+    }
+  }, [editando]);
+
+
+
+  
+   let dataFormatada = "";
+
+  if (data) {
+  const [ano, mes, dia] = data.split("-");
+  dataFormatada = new Date(ano, mes - 1, dia)
+    .toLocaleDateString("pt-BR");
+  }
 
   const adicionarTreino = () => {
     const novoTreino = {
@@ -43,14 +76,35 @@ function Detalhes() {
     setModal(false);
   };
 
-
- const removerTreino = (id) => {
-  setHistorico(prev =>
-    prev.filter(treino => treino.id !== id)
-  );
-};
+  const removerTreino = (id) => {
+    setHistorico((prev) => prev.filter((treino) => treino.id !== id));
+  };
 
   console.log(historico);
+
+  const salvarEdicao = () => {
+    setHistorico((prev) =>
+      prev.map((treino) => {
+        if (treino.id !== editando.id) return treino;
+
+        return {
+          ...treino,
+          data: dataFormatada,
+          exercicios: [
+            {
+              ...treino.exercicios[0],
+              series,
+              repeticoes: reps,
+              peso,
+            },
+          ],
+        };
+      }),
+    );
+
+    setEditando(null);
+    setModal(false);
+  };
 
   return (
     <div className="detalhe-container">
@@ -109,11 +163,20 @@ function Detalhes() {
                           </div>
 
                           <div className="botoes">
-                            <button className="botao-editar">
+                            <button
+                              className="botao-editar"
+                              onClick={() => {
+                                setEditando(treino);
+                                setModal(true);
+                              }}
+                            >
                               <FaEdit size={18} color="#fff" />
                             </button>
-                            <button onClick={()=> removerTreino(treino.id)} className="botao-deletar">
-                              <FaTrash  size={18} color="#fff" />
+                            <button
+                              onClick={() => removerTreino(treino.id)}
+                              className="botao-deletar"
+                            >
+                              <FaTrash size={18} color="#fff" />
                             </button>
                           </div>
                         </div>
@@ -121,20 +184,19 @@ function Detalhes() {
                     </div>
                   ))
                 ) : (
-                  <div>
-                    <p>não tem nada</p>
+                  <div className="historico-sem-treino">
+                    <p>Nenhum treino cadastrado</p>
                   </div>
                 )}
 
-            <div className="div-botao">
-                <button
-                  className="botao-adicionar"
-                  onClick={() => setModal(true)}
-                >
-                  Adicionar
-                </button>
+                <div className="div-botao">
+                  <button
+                    className="botao-adicionar"
+                    onClick={() => setModal(true)}
+                  >
+                    Adicionar
+                  </button>
                 </div>
-
               </div>
 
               {modal && (
@@ -187,9 +249,9 @@ function Detalhes() {
 
                     <button
                       className="botao-registrar"
-                      onClick={adicionarTreino}
+                      onClick={editando ? salvarEdicao : adicionarTreino}
                     >
-                      Registrar
+                      {editando ? "Salvar" : "Registrar"}
                     </button>
                   </div>
                 </div>

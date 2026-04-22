@@ -250,3 +250,17 @@
     padding-right: 30px;
 
 }
+
+.historico-sem-treino{
+    display: flex;
+    flex-direction: row;
+    background-color: #585858;
+    margin: 30px;
+    align-items: center;
+    justify-content: center;
+    height: 64px;
+    padding-left: 30px;
+    border-radius: 8px;
+    gap: 30px;
+    max-width: 1280px;
+}
