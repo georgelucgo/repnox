@@ -3,7 +3,7 @@ import Home from "./pages/Home";
 import Header from "./components/header/header";
 import Exercicios from "./pages/Exercicio";
 import Detalhes from "./pages/Detalhes";
-import {  } from "react-router-dom";
+import Historico from "./pages/historico";
 
 function App() {
   return (
@@ -13,6 +13,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/exercicios/:musculo" element={<Exercicios />} />
         <Route path="/exercicio/:id" element={<Detalhes />} />
+        <Route path="/historico" element={<Historico />} />
       </Routes>
     </BrowserRouter>
   );

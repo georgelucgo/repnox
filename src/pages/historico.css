@@ -1,0 +1,87 @@
+.h-container {
+  background-color: #1a1a1a;
+  min-height: 100vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.h-content {
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 100px;
+  padding: 0 20px;
+}
+
+.h-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.h-historico {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.h-historico h1 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.h-card {
+  display: flex;
+  background-color: #2a2a2a;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 25px;
+}
+
+.h-exercicio {
+  width: 260px;
+  padding: 20px;
+  background-color: #222;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.h-exercicio img {
+  width: 100%;
+  max-width: 200px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.h-exercicio h2 {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.h-historico-container {
+  flex: 1;
+  padding: 20px;
+}
+
+.h-header {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  font-weight: bold;
+  opacity: 0.7;
+  margin-bottom: 10px;
+}
+
+.h-linha {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 10px 0;
+  border-top: 1px solid #3a3a3a;
+}
+
+.h-header p,
+.h-linha p {
+  text-align: center;
+}

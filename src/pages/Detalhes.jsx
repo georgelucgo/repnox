@@ -10,13 +10,13 @@ import { useEffect } from "react";
 function Detalhes() {
   const { id } = useParams();
   const [modal, setModal] = useState(false);
-const [historico, setHistorico] = useState(() => {
-  const salvo = localStorage.getItem("historico");
+  const [historico, setHistorico] = useState(() => {
+    const salvo = localStorage.getItem("historico");
 
-  if (salvo) return JSON.parse(salvo);
+    if (salvo) return JSON.parse(salvo);
 
-  return treinos.historico || [];
-});
+    return treinos.historico || [];
+  });
   const [data, setData] = useState("");
   const [series, setSeries] = useState(0);
   const [peso, setPeso] = useState(0);
@@ -27,15 +27,11 @@ const [historico, setHistorico] = useState(() => {
     (item) => item.id === Number(id),
   );
 
-
-useEffect(() => {
-  localStorage.setItem("historico", JSON.stringify(historico));
-}, [historico]);
-
+  useEffect(() => {
+    localStorage.setItem("historico", JSON.stringify(historico));
+  }, [historico]);
 
   useEffect(() => {
-
-
     if (editando) {
       setData(editando.data);
 
@@ -46,15 +42,11 @@ useEffect(() => {
     }
   }, [editando]);
 
-
-
-  
-   let dataFormatada = "";
+  let dataFormatada = "";
 
   if (data) {
-  const [ano, mes, dia] = data.split("-");
-  dataFormatada = new Date(ano, mes - 1, dia)
-    .toLocaleDateString("pt-BR");
+    const [ano, mes, dia] = data.split("-");
+    dataFormatada = new Date(ano, mes - 1, dia).toLocaleDateString("pt-BR");
   }
 
   const adicionarTreino = () => {
@@ -106,6 +98,12 @@ useEffect(() => {
     setModal(false);
   };
 
+  const historicoFiltrado = historico.filter((treino) =>
+    treino.exercicios.some((ex) => Number(ex.id) === Number(id)),
+  );
+
+  console.log(historicoFiltrado);
+
   return (
     <div className="detalhe-container">
       <div className="detalhe-content">
@@ -150,17 +148,15 @@ useEffect(() => {
               </div>
 
               <div className="historico">
-                {historico.length > 0 ? (
-                  historico.map((treino) => (
+                {historicoFiltrado.length > 0 ? (
+                  historicoFiltrado.map((treino) => (
                     <div key={treino.id}>
                       {treino.exercicios.map((item) => (
                         <div className="historico-treino">
-                          <div className="historico-treino-content">
-                            <p>{treino.data}</p>
-                            <p>{item.series}</p>
-                            <p>{item.repeticoes}</p>
-                            <p>{item.peso}</p>
-                          </div>
+                          <p>{treino.data}</p>
+                          <p>{item.series}</p>
+                          <p>{item.peso}</p>
+                          <p>{item.repeticoes}</p>
 
                           <div className="botoes">
                             <button
@@ -172,6 +168,7 @@ useEffect(() => {
                             >
                               <FaEdit size={18} color="#fff" />
                             </button>
+
                             <button
                               onClick={() => removerTreino(treino.id)}
                               className="botao-deletar"

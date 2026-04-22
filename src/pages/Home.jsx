@@ -36,7 +36,9 @@ function Home() {
 
         <div className="about-content">
           <div className="about-top">
-            <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </h2>
+            <h2>Organize seus treinos, acompanhe seu progresso e evolua todos os dias
+
+ </h2>
             <h1>SOBRE NÓS</h1>
           </div>
 
@@ -50,8 +52,7 @@ function Home() {
               />
               <h3>REGISTRE</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
-                excepturi illum maxime, iusto iure corporis molestiae.
+                Registre seus treinos de forma rápida e prática, anotando séries, peso e repetições para acompanhar sua evolução.
               </p>
             </div>
 
@@ -63,8 +64,7 @@ function Home() {
               />
               <h3>ACOMPANHE</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
-                excepturi illum maxime, iusto iure corporis molestiae.
+                Visualize seu progresso ao longo do tempo e entenda como seu desempenho está evoluindo a cada treino.
               </p>
             </div>
 
@@ -72,8 +72,7 @@ function Home() {
               <FaRegStar className="about-icon" size={40} color="#F16D10" />
               <h3>FAVORITE</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
-                excepturi illum maxime, iusto iure corporis molestiae.
+                Salve seus exercícios favoritos e tenha acesso rápido aos treinos que você mais utiliza no seu dia a dia.
               </p>
             </div>
 
@@ -81,8 +80,7 @@ function Home() {
               <FaHistory className="about-icon" size={40} color="#F16D10" />
               <h3>HISTÓRICO</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
-                excepturi illum maxime, iusto iure corporis molestiae.
+                Consulte todo o seu histórico de treinos e acompanhe sua evolução de forma organizada e detalhada.
               </p>
             </div>
           </div>
