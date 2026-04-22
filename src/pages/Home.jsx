@@ -26,7 +26,9 @@ function Home() {
           <p className="hero-subtitle">
             Registre seus treinos e supere seus limites!
           </p>
+          <a href="#exercicios">
           <button className="hero-button">COMEÇAR</button>
+          </a>
         </div>
         <img className="hero-img" src={Hero} alt="" />
       </div>
@@ -86,7 +88,7 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="exercicios-container">
+      <div id="exercicios" className="exercicios-container">
         <div className="exercicios-title">
           <p>Escolha um conjunto</p>
           <h1>EXERCICIOS</h1>
