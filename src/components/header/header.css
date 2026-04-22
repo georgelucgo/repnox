@@ -27,17 +27,48 @@
     color: white;
     cursor: pointer;
     user-select: none;
+    font-size: 2em;
 }
 .span-logo{
     color: #F16D10
 }
 
-.navbar{
-    font-weight: bold;    
+.navbar {
+    font-weight: bold;
+    display: flex;
+    gap: 20px;
+    font-size: 1em;
+    justify-content: center;
 }
 
 .header a {
     text-decoration: none;
     margin: 0 30px;
     color: white;
+}
+
+
+@media (max-width: 480px) { 
+    .header{
+        width: 100%;
+        max-width: 480px;
+    }
+    .header-content{
+        gap: 40px;
+        display: flex
+    }
+    .logo{
+        font-size: 1em;
+        margin: 0px;
+    }
+
+    .navbar{
+        width: 100%;
+        display: flex;
+        gap: 30px;
+        font-size: 0.9em;
+    }
+    .header a{
+            margin: 0px;
+    }
 }

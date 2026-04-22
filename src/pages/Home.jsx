@@ -27,20 +27,22 @@ function Home() {
             Registre seus treinos e supere seus limites!
           </p>
           <a href="#exercicios">
-          <button className="hero-button">COMEÇAR</button>
+            <button className="hero-button">COMEÇAR</button>
           </a>
         </div>
         <img className="hero-img" src={Hero} alt="" />
       </div>
 
       <div className="about-container">
+        <div className="about-conteudo">
         <img className="about-img" src={About} alt="" />
 
         <div className="about-content">
           <div className="about-top">
-            <h2>Organize seus treinos, acompanhe seu progresso e evolua todos os dias
-
- </h2>
+            <h2>
+              Organize seus treinos, acompanhe seu progresso e evolua todos os
+              dias
+            </h2>
             <h1>SOBRE NÓS</h1>
           </div>
 
@@ -54,7 +56,8 @@ function Home() {
               />
               <h3>REGISTRE</h3>
               <p>
-                Registre seus treinos de forma rápida e prática, anotando séries, peso e repetições para acompanhar sua evolução.
+                Registre seus treinos de forma rápida e prática, anotando
+                séries, peso e repetições para acompanhar sua evolução.
               </p>
             </div>
 
@@ -66,7 +69,8 @@ function Home() {
               />
               <h3>ACOMPANHE</h3>
               <p>
-                Visualize seu progresso ao longo do tempo e entenda como seu desempenho está evoluindo a cada treino.
+                Visualize seu progresso ao longo do tempo e entenda como seu
+                desempenho está evoluindo a cada treino.
               </p>
             </div>
 
@@ -74,7 +78,8 @@ function Home() {
               <FaRegStar className="about-icon" size={40} color="#F16D10" />
               <h3>FAVORITE</h3>
               <p>
-                Salve seus exercícios favoritos e tenha acesso rápido aos treinos que você mais utiliza no seu dia a dia.
+                Salve seus exercícios favoritos e tenha acesso rápido aos
+                treinos que você mais utiliza no seu dia a dia.
               </p>
             </div>
 
@@ -82,10 +87,12 @@ function Home() {
               <FaHistory className="about-icon" size={40} color="#F16D10" />
               <h3>HISTÓRICO</h3>
               <p>
-                Consulte todo o seu histórico de treinos e acompanhe sua evolução de forma organizada e detalhada.
+                Consulte todo o seu histórico de treinos e acompanhe sua
+                evolução de forma organizada e detalhada.
               </p>
             </div>
           </div>
+        </div>
         </div>
       </div>
       <div id="exercicios" className="exercicios-container">
@@ -100,13 +107,13 @@ function Home() {
 
             return (
               <Link to={`exercicios/${musculo}`}>
-              <div className="exercicios-card" key={musculo}>
-                <img src={exercicio.imagem} alt="" />
-                <div className="exercicios-card-text">
-                <h1>{musculo}</h1>
-                <p>{treinos.musculos[musculo]}</p>
+                <div className="exercicios-card" key={musculo}>
+                  <img src={exercicio.imagem} alt="" />
+                  <div className="exercicios-card-text">
+                    <h1>{musculo}</h1>
+                    <p>{treinos.musculos[musculo]}</p>
+                  </div>
                 </div>
-              </div>
               </Link>
             );
           })}

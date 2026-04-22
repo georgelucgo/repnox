@@ -38,7 +38,8 @@
 }
 
 .h-exercicio {
-  width: 260px;
+  width: 100%;
+  max-width: 260px;
   padding: 20px;
   background-color: #222;
   display: flex;
@@ -84,4 +85,31 @@
 .h-header p,
 .h-linha p {
   text-align: center;
+}
+
+
+
+@media (max-width: 768px) {
+  .h-card {
+    width: 100%;
+    max-width: 800px;
+    flex-direction: column;
+  }
+
+  .h-exercicio {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .h-exercicio img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
+
+  .h-historico h1 {
+      text-align: center;
+  }
+  
+ 
 }

@@ -1,12 +1,13 @@
 .exercicio-container{
     display: flex;
-    height: 100vh;
+    min-height: 100vh;    
     background-color: #272727;
     color: white;
 }
 
 .exercicio-title{
     font-size: 3em;
+    text-align: center;
     text-transform: uppercase;
 }
 
@@ -24,7 +25,8 @@
 .buscar {
   position: relative;
   margin: 30px;
-  width: 800px;
+  width: 100%;
+  max-width: 800px;
 }
 
 .buscar input {
@@ -92,3 +94,5 @@
     text-decoration: none;
     color: white;
 }
+
+

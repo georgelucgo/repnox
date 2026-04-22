@@ -136,18 +136,26 @@ function Detalhes() {
               </div>
 
               <div className="detalhe-info">
-                <div className="detalhe-info-left">
+                <div className="detalhe-info-imagens">
                   <img src={item.imagem} alt="" />
-                  <h2>Grupo Muscular</h2>
-                  <h2>Tipo do Exercício</h2>
-                  <h2>Equipamento</h2>
-                </div>
-
-                <div className="detalhe-info-right">
                   <img src={item.musculoImagem} alt="" />
-                  <p>{item.musculo}</p>
-                  <p>{item.tipo}</p>
-                  <p>{item.equipamento}</p>
+                </div>
+                <div className="detalhe-info-texto">
+                  <div>
+                    <h2>Grupo Muscular</h2>
+                    <p>{item.musculo}</p>
+                    <br />
+                  </div>
+                  <div>
+                    <h2>Tipo do Exercício</h2>
+                    <p>{item.tipo}</p>
+                    <br />
+                  </div>
+                  <div>
+                    <h2>Equipamento</h2>
+                    <p>{item.equipamento}</p>
+                    <br />
+                  </div>
                 </div>
               </div>
 
@@ -171,8 +179,8 @@ function Detalhes() {
                 {historicoFiltrado.length > 0 ? (
                   historicoFiltrado.map((treino) => (
                     <div key={treino.id}>
-                      {treino.exercicios.map((item) => (
-                        <div className="historico-treino">
+                      {treino.exercicios.map((item, index) => (
+                        <div className="historico-treino" key={index}>
                           <p>{treino.data}</p>
                           <p>{item.series}</p>
                           <p>{item.peso}</p>
