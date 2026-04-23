@@ -42,6 +42,16 @@ function Historico() {
     return new Date(`${ano}-${mes}-${dia}`);
   }
 
+  function formatarData(data) {
+    let dataFormatada = "";
+    if (data) {
+      const [ano, mes, dia] = data.split("-");
+      dataFormatada = new Date(ano, mes - 1, dia).toLocaleDateString("pt-BR");
+    }
+    console.log(dataFormatada)
+    return dataFormatada
+  }
+  
   return (
     <div className="h-container">
       <div className="h-content">
@@ -74,7 +84,7 @@ function Historico() {
                       .slice(0, 4)
                       .map((item, index) => (
                         <div key={index} className="h-linha">
-                          <p>{item.data}</p>
+                          <p>{formatarData(item.data)}</p>
                           <p>{item.series}</p>
                           <p>{item.peso}</p>
                           <p>{item.repeticoes}</p>
