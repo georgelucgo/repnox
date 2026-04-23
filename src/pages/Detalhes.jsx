@@ -71,10 +71,21 @@ function Detalhes() {
     }
   }, [erro]);
 
+  function formatarData(data){
+    let dataFormatada = "";
+    if (data) {
+    const [ano, mes, dia] = data.split("-");
+    dataFormatada = new Date(ano, mes - 1, dia).toLocaleDateString("pt-BR");
+  }
+  return dataFormatada  
+}
+
+
+  
   const adicionarTreino = () => {
     const novoTreino = {
       id: Date.now(),
-      data: dataFormatada,
+      data: data,
       musculo: exercicios[0].musculo,
       exercicios: [
         {
@@ -103,7 +114,7 @@ function Detalhes() {
 
         return {
           ...treino,
-          data: dataFormatada,
+          data: data,
           exercicios: [
             {
               ...treino.exercicios[0],
@@ -217,7 +228,7 @@ function Detalhes() {
                     <div key={treino.id}>
                       {treino.exercicios.map((item, index) => (
                         <div className="historico-treino" key={index}>
-                          <p>{treino.data}</p>
+                          <p>{formatarData(treino.data)}</p>
                           <p>{item.series}</p>
                           <p>{item.peso} kg</p>
                           <p>{item.repeticoes} reps</p>
