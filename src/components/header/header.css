@@ -50,10 +50,7 @@
 
 @media (max-width: 480px) { 
     .header{
-<<<<<<< HEAD
         display: none;
-=======
->>>>>>> adbd70a40a05f4314f664ec6506bc5fbe3c9a4f0
         width: 100%;
         max-width: 480px;
     }

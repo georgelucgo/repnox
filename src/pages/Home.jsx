@@ -30,10 +30,7 @@ function Home() {
             <button className="hero-button">COMEÇAR</button>
           </a>
         </div>
-<<<<<<< HEAD
           <div className="hero-overlay"></div>
-=======
->>>>>>> adbd70a40a05f4314f664ec6506bc5fbe3c9a4f0
         <img className="hero-img" src={Hero} alt="" />
       </div>
 
