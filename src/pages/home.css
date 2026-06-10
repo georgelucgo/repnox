@@ -2,15 +2,22 @@
     z-index: -1;
 }
 
+<<<<<<< HEAD
 
 /* Hero */
 
+=======
+>>>>>>> adbd70a40a05f4314f664ec6506bc5fbe3c9a4f0
 .hero {
     background-color: #111111;
     width: 100%;
     color: white;
     display: flex;
     height: 100vh;
+<<<<<<< HEAD
+=======
+    max-height: 800px;
+>>>>>>> adbd70a40a05f4314f664ec6506bc5fbe3c9a4f0
 }
 
 .hero-img {
@@ -50,15 +57,23 @@
     background-color: #F16D10;
     border: 0;
     border-radius: 16px;
+<<<<<<< HEAD
     width: 200px;
+=======
+    max-width: 180px;
+    width: 100%;
+>>>>>>> adbd70a40a05f4314f664ec6506bc5fbe3c9a4f0
 }
 
 
 
+<<<<<<< HEAD
 
 /* Sobre */
 
 
+=======
+>>>>>>> adbd70a40a05f4314f664ec6506bc5fbe3c9a4f0
 .about-container {
     display: flex;
     position: relative;
@@ -69,7 +84,11 @@
     overflow: hidden;
 }
 
+<<<<<<< HEAD
 .about-conteudo {
+=======
+.about-conteudo{
+>>>>>>> adbd70a40a05f4314f664ec6506bc5fbe3c9a4f0
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -77,8 +96,11 @@
     max-width: 1280px;
     align-items: center;
     z-index: 3;
+<<<<<<< HEAD
     margin-right: 30px;
     margin-bottom: 80px;
+=======
+>>>>>>> adbd70a40a05f4314f664ec6506bc5fbe3c9a4f0
 }
 
 .about-img {
@@ -100,8 +122,13 @@
 .about-top h1 {
     font-size: 3.3em;
     color: white;
+<<<<<<< HEAD
     text-align: center;
     margin-bottom: 100px;
+=======
+        text-align: center;
+        margin-bottom: 200px;
+>>>>>>> adbd70a40a05f4314f664ec6506bc5fbe3c9a4f0
 }
 
 
@@ -112,7 +139,11 @@
 .about-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+<<<<<<< HEAD
     gap: 20px;
+=======
+    gap: 100px;
+>>>>>>> adbd70a40a05f4314f664ec6506bc5fbe3c9a4f0
     text-align: center;
     place-items: center;
 }
@@ -121,6 +152,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+<<<<<<< HEAD
     justify-content: flex-start;
     color: white;
     width: 100%;
@@ -139,6 +171,17 @@
     min-height: 30px;
     display: flex;
     align-items: center;
+=======
+    justify-content: center;
+    color: white;
+    width: 100%;
+    max-width: 280px;
+    gap: 16px;
+}
+
+.about-item h3 {
+    font-size: 29px;
+>>>>>>> adbd70a40a05f4314f664ec6506bc5fbe3c9a4f0
 }
 
 
@@ -151,7 +194,11 @@
     border-radius: 16px;
 }
 
+<<<<<<< HEAD
 /* EXERCICIOS */
+=======
+
+>>>>>>> adbd70a40a05f4314f664ec6506bc5fbe3c9a4f0
 
 .exercicios-container {
     display: flex;
@@ -183,8 +230,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+<<<<<<< HEAD
     width: 100%;
     max-width: 300px;
+=======
+    width: 300px;
+>>>>>>> adbd70a40a05f4314f664ec6506bc5fbe3c9a4f0
     height: 400px;
     background-color: #2A2A2A;
     border-radius: 8px;
@@ -214,8 +265,11 @@
     height: 200px;
     object-fit: cover;
     margin-bottom: 16px;
+<<<<<<< HEAD
     padding: 8px;
     border-radius: 18px;
+=======
+>>>>>>> adbd70a40a05f4314f664ec6506bc5fbe3c9a4f0
 }
 
 .exercicios-card-container {
@@ -225,7 +279,10 @@
     max-width: 1280px;
     gap: 30px;
     justify-content: center;
+<<<<<<< HEAD
     margin-bottom: 50px;
+=======
+>>>>>>> adbd70a40a05f4314f664ec6506bc5fbe3c9a4f0
 }
 
 .exercicios-card-container a {
@@ -235,6 +292,7 @@
 
 
 .circulo {
+<<<<<<< HEAD
     position: absolute;
 
     width: 50vw;
@@ -258,11 +316,35 @@
     }
 
 
+=======
+  position: absolute;
+
+  width: 50vw;
+  height: 50vw;
+  max-width: 700px;
+  max-height: 700px;
+
+  border-radius: 50%;
+  border: 52px solid #F16D10;
+
+  top: -150px;
+  left: -120px;
+
+  z-index: 0;
+}
+
+@media (max-width: 880px) {
+
+    .circulo{
+        display: none;
+    }
+>>>>>>> adbd70a40a05f4314f664ec6506bc5fbe3c9a4f0
     .hero {
         display: flex;
         flex-direction: column-reverse;
         flex-wrap: wrap;
         max-height: 1000px;
+<<<<<<< HEAD
         height: 100vh;
     }
 
@@ -313,12 +395,30 @@
 
     /* SOBRE */
 
+=======
+        height: auto;
+    }
+
+    .hero img {
+        height: 50%;
+        max-width: 100%;
+    }
+
+    .hero-content {
+        margin-top: 100px;
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+
+    
+>>>>>>> adbd70a40a05f4314f664ec6506bc5fbe3c9a4f0
     .about-conteudo {
         display: flex;
         padding: 30px;
         flex-direction: column;
         height: auto;
         text-align: center;
+<<<<<<< HEAD
         margin-bottom: 30px;
     }
 
@@ -347,10 +447,26 @@
 
     .about-top {
         margin-top: 30px;
+=======
+    }
+
+    .about-list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .about-top{
+        margin-top: 30px;
+        gap: 30px;
+>>>>>>> adbd70a40a05f4314f664ec6506bc5fbe3c9a4f0
         display: flex;
         flex-direction: column;
     }
 
+<<<<<<< HEAD
     .about-top h2 {
         display: none;
     }
@@ -410,10 +526,23 @@
 
 
 
+=======
+    .about-img{
+        margin: 0;
+        width: 100%;
+        height: 400px;
+    }
+
+
+    .exercicios-container{
+        padding: 30px;
+    }    
+>>>>>>> adbd70a40a05f4314f664ec6506bc5fbe3c9a4f0
 }
 
 @media (max-width: 480px) {
 
+<<<<<<< HEAD
 
     .circulo {
         display: none;
@@ -573,4 +702,62 @@
     }
 
 
+=======
+ .circulo{
+        display: none;
+    }
+
+    .hero-title {
+        font-size: 2em;
+    }
+
+    .hero-button {
+        font-size: 1em;
+
+    }
+
+    .hero-subtitle {
+        font-size: 1em;
+    }
+
+    .header {
+        display: none;
+    }
+
+    .about-conteudo {
+        display: flex;
+        padding: 30px;
+        gap: 30px;
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+    }
+
+    .about-list {
+        display: flex;
+        margin-top: 30px;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .about-top{
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-bottom: 30px;
+    }
+
+    .about-img{
+        margin: 0;
+        width: 100%;
+        height: 400px;
+    }
+
+
+    .exercicios-container{
+        padding: 30px;
+    }
+
+>>>>>>> adbd70a40a05f4314f664ec6506bc5fbe3c9a4f0
 }
