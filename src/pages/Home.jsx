@@ -1,6 +1,6 @@
-import Hero from "../assets/hero.jpeg";
-import About from "../assets/about.jpg";
-import RegisterIcon from "../assets/register.png";
+import Hero from "/images/hero.jpeg";
+import About from "/images/about.jpg";
+import RegisterIcon from "/images/register.png";
 import "./home.css";
 import { FaRegStar, FaHistory } from "react-icons/fa";
 import { FaPeoplePulling } from "react-icons/fa6";
